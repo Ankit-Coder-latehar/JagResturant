@@ -37,7 +37,7 @@ export const Reservation: React.FC = () => {
 
     // Generate unique royal booking reference
     const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    const code = "JAG-" + 
+    const code = "JASHAN-" + 
       alphabet[Math.floor(Math.random() * 26)] + 
       alphabet[Math.floor(Math.random() * 26)] + 
       Math.floor(1000 + Math.random() * 9000);

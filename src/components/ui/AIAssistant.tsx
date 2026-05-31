@@ -68,8 +68,8 @@ export const AIAssistant: React.FC = () => {
         zaraText = language === "ar"
           ? `ساعات العمل الفاخرة لدينا هي كالتالي:\n• أيام الأسبوع: من 12:00 ظهراً حتى 12:00 منتصف الليل\n• عطلة نهاية الأسبوع: من 12:00 ظهراً حتى 02:00 بعد منتصف الليل`
           : language === "tr"
-          ? `Jag sarayımızın çalışma saatleri:\n• Hafta içi: 12:00 - 00:00\n• Hafta sonu: 12:00 - 02:00`
-          : `Our business hours at Jag Restaurant Dubai:\n• Weekdays: 12:00 PM - 12:00 AM\n• Weekends: 12:00 PM - 02:00 AM`;
+          ? `Jashan sarayımızın çalışma saatleri:\n• Hafta içi: 12:00 - 00:00\n• Hafta sonu: 12:00 - 02:00`
+          : `Our business hours at Jashan Restaurant Dubai:\n• Weekdays: 12:00 PM - 12:00 AM\n• Weekends: 12:00 PM - 02:00 AM`;
         break;
 
       case "location":
@@ -158,13 +158,13 @@ export const AIAssistant: React.FC = () => {
 
     if (bookingStep === 3) {
       const guests = userText;
-      const refCode = "JAG-AI-" + Math.floor(1000 + Math.random() * 9000);
+      const refCode = "JASHAN-AI-" + Math.floor(1000 + Math.random() * 9000);
       
       const response = language === "ar"
-        ? `رائع جداً! لقد قمت بجدولة حجز مبدئي باسم ${bookingDetails.name} للتاريخ ${bookingDetails.date} لعدد ${guests} أشخاص.\n\nرمز الحجز الخاص بك هو: ${refCode}.\n\nنتطلع بشوق للترحيب بكم في صالة جاغ الملكية!`
+        ? `رائع جداً! لقد قمت بجدولة حجز مبدئي باسم ${bookingDetails.name} للتاريخ ${bookingDetails.date} لعدد ${guests} أشخاص.\n\nرمز الحجز الخاص بك هو: ${refCode}.\n\nنتطلع بشوق للترحيب بكم في صالة جاشان الملكية!`
         : language === "tr"
-        ? `Mükemmel! Rezervasyonunuz oluşturuldu. Sayın ${bookingDetails.name} adına, ${bookingDetails.date} tarihinde ${guests} kişilik masanız ayrılmıştır.\n\nRezervasyon Kodunuz: ${refCode}.\n\nJag Restaurant Dubai'de sizi ağırlamak için sabırsızlanıyoruz!`
-        : `Splendid! I have reserved a provisional seating for ${bookingDetails.name} on ${bookingDetails.date} for ${guests} guests.\n\nBooking Reference: ${refCode}.\n\nWe look forward to welcoming you to the halls of Jag!`;
+        ? `Mükemmel! Rezervasyonunuz oluşturuldu. Sayın ${bookingDetails.name} adına, ${bookingDetails.date} tarihinde ${guests} kişilik masanız ayrılmıştır.\n\nRezervasyon Kodunuz: ${refCode}.\n\nJashan Restaurant Dubai'de sizi ağırlamak için sabırsızlanıyoruz!`
+        : `Splendid! I have reserved a provisional seating for ${bookingDetails.name} on ${bookingDetails.date} for ${guests} guests.\n\nBooking Reference: ${refCode}.\n\nWe look forward to welcoming you to the halls of Jashan!`;
       
       addZaraResponse(response);
       setBookingStep(0);

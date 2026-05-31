@@ -33,7 +33,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
   // Theme Toggle Logic
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const storedTheme = localStorage.getItem("jag_theme") as "dark" | "light";
+      const storedTheme = localStorage.getItem("jashan_theme") as "dark" | "light";
       if (storedTheme) {
         setTheme(storedTheme);
         const root = document.documentElement;
@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
-    localStorage.setItem("jag_theme", nextTheme);
+    localStorage.setItem("jashan_theme", nextTheme);
     const root = document.documentElement;
     if (nextTheme === "light") {
       root.classList.add("light");
@@ -126,7 +126,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCartClick }) => {
             </svg>
             <div className="flex flex-col">
               <span className="text-xl font-serif-luxury font-bold tracking-[0.2em] text-gold text-gold-glow">
-                JAG
+                JASHAN
               </span>
               <span className="text-[7px] tracking-[0.35em] text-text-primary uppercase font-light -mt-1 hidden sm:inline">
                 RESTAURANT DUBAI

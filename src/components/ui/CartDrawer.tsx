@@ -67,10 +67,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ open, onClose }) => {
 
     // Compile absolute order list
     let orderText = language === "ar"
-      ? `📝 *طلب مأكولات فاخرة جديد - مطعم جاغ دبي*\n\n`
+      ? `📝 *طلب مأكولات فاخرة جديد - مطعم جاشان دبي*\n\n`
       : language === "tr"
-      ? `📝 *Yeni Gurme Siparişi - Jag Restaurant Dubai*\n\n`
-      : `📝 *New Luxury Order - Jag Restaurant Dubai*\n\n`;
+      ? `📝 *Yeni Gurme Siparişi - Jashan Restaurant Dubai*\n\n`
+      : `📝 *New Luxury Order - Jashan Restaurant Dubai*\n\n`;
 
     cart.forEach((item, idx) => {
       orderText += `${idx + 1}. *${getLocalizedName(item)}* x ${item.quantity} (${item.price * item.quantity} AED)\n`;

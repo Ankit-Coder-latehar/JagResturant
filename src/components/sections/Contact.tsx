@@ -11,10 +11,10 @@ export const Contact: React.FC = () => {
   const handleWhatsAppChat = () => {
     // Generate pre-filled WhatsApp greeting message
     const greeting = language === "ar"
-      ? "مرحباً مطعم جاغ، أرغب في الاستفسار عن حجز طاولة أو قائمة الطعام."
+      ? "مرحباً مطعم جاشان، أرغب في الاستفسار عن حجز طاولة أو قائمة الطعام."
       : language === "tr"
-      ? "Merhaba Jag Restaurant, masa rezervasyonu ve menü hakkında bilgi almak istiyorum."
-      : "Hello Jag Restaurant, I would like to inquire about reservation slots and menu options.";
+      ? "Merhaba Jashan Restaurant, masa rezervasyonu ve menü hakkında bilgi almak istiyorum."
+      : "Hello Jashan Restaurant, I would like to inquire about reservation slots and menu options.";
       
     const encodedText = encodeURIComponent(greeting);
     window.open(`https://wa.me/971501234567?text=${encodedText}`, "_blank");
@@ -134,7 +134,7 @@ export const Contact: React.FC = () => {
                 <div className="flex flex-col gap-1.5 text-xs text-text-secondary font-light font-mono">
                   <span>Phone: +971 4 321 0987</span>
                   <span>Mobile/WhatsApp: +971 50 123 4567</span>
-                  <span className="font-sans font-light">Email: concierge@jagrestaurant.ae</span>
+                  <span className="font-sans font-light">Email: concierge@jashanrestaurant.ae</span>
                 </div>
               </div>
             </motion.div>

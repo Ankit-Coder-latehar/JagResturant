@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Jag Restaurant Dubai | Authentic Turkish & Azerbaijani Fine Dining",
-  description: "Experience the pinnacle of culinary artistry at Jag Restaurant, Dubai. Fusing rich Turkish and Azerbaijani imperial traditions with Michelin-inspired luxury. Located on Jumeirah Beach Road.",
+  title: "Jashan Restaurant Dubai | Authentic Turkish & Azerbaijani Fine Dining",
+  description: "Experience the pinnacle of culinary artistry at Jashan Restaurant, Dubai. Fusing rich Turkish and Azerbaijani imperial traditions with Michelin-inspired luxury. Located on Jumeirah Beach Road.",
   keywords: [
-    "Jag Restaurant Dubai",
+    "Jashan Restaurant Dubai",
     "Turkish Cuisine Dubai",
     "Azerbaijani Cuisine Dubai",
     "Jumeirah Fine Dining",
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Adana Kebab Dubai",
     "Authentic Dining Dubai"
   ],
-  authors: [{ name: "Jag Restaurant Concierge" }],
+  authors: [{ name: "Jashan Restaurant Concierge" }],
   robots: "index, follow",
 };
 

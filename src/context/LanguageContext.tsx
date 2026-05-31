@@ -40,9 +40,9 @@ export const translations: Translations = {
   aboutTitle: { en: "Our Story", ar: "قصتنا", tr: "Hikayemiz" },
   aboutSubtitle: { en: "Heritage, Passion & Master Craftsmanship", ar: "التراث والشغف وحرفية الطهي", tr: "Miras, Tutku ve Ustalık" },
   aboutText1: {
-    en: "Jag Restaurant Dubai represents a harmonious fusion of Turkish and Azerbaijani culinary arts. Rooted in century-old traditions, our master chefs create a symphony of flavors that honor the royal feasts of Istanbul and the rich hearths of Baku.",
-    ar: "يمثل مطعم جاغ دبي اندماجاً متناغماً بين فنون الطهي التركية والأذربيجانية. يبتكر طهاتنا المتميزون سيمفونية من النكهات المستوحاة من التقاليد العريقة والولائم السلطانية في إسطنبول ومطابخ باكو الغنية.",
-    tr: "Jag Restaurant Dubai, Türk ve Azerbaycan mutfak sanatlarının kusursuz bir sentezini sunar. Yüzyıllık geleneklere sadık kalan usta şeflerimiz, İstanbul saray ziyafetleri ile Bakü ocaklarının zengin aromalarını modern bir gastronomi yorumuyla buluşturuyor."
+    en: "Jashan Restaurant Dubai represents a harmonious fusion of Turkish and Azerbaijani culinary arts. Rooted in century-old traditions, our master chefs create a symphony of flavors that honor the royal feasts of Istanbul and the rich hearths of Baku.",
+    ar: "يمثل مطعم جاشان دبي اندماجاً متناغماً بين فنون الطهي التركية والأذربيجانية. يبتكر طهاتنا المتميزون سيمفونية من النكهات المستوحاة من التقاليد العريقة والولائم السلطانية في إسطنبول ومطابخ باكو الغنية.",
+    tr: "Jashan Restaurant Dubai, Türk ve Azerbaycan mutfak sanatlarının kusursuz bir sentezini sunar. Yüzyıllık geleneklere sadık kalan usta şeflerimiz, İstanbul saray ziyafetleri ile Bakü ocaklarının zengin aromalarını modern bir gastronomi yorumuyla buluşturuyor."
   },
   aboutText2: {
     en: "Every ingredient is sourced directly from ethical organic farms in Anatolia and the Caucasus, ensuring that every bite delivers unmatched authenticity and visual poetry.",
@@ -60,7 +60,7 @@ export const translations: Translations = {
   statDishes: { en: "Signature Creations", ar: "أطباق مبتكرة مميزة", tr: "İmza Lezzet" },
 
   // Signature Dishes
-  sigTitle: { en: "Signature Masterpieces", ar: "روائع جاغ المبتكرة", tr: "İmza Başyapıtlarımız" },
+  sigTitle: { en: "Signature Masterpieces", ar: "روائع جاشان المبتكرة", tr: "İmza Başyapıtlarımız" },
   sigSub: { en: "A curated preview of our award-winning culinary presentations.", ar: "عرض منسق لأطباقنا الحائزة على جوائز مرموقة.", tr: "Ödüllü şeflerimizin elinden çıkan görsel ve lezzetsel şölen." },
   filterAll: { en: "All Creations", ar: "كل الإبداعات", tr: "Tüm Lezzetler" },
   filterTurkish: { en: "Turkish Specials", ar: "المقبلات والأطباق التركية", tr: "Türk Spesiyalleri" },
@@ -81,7 +81,7 @@ export const translations: Translations = {
   viewDetails: { en: "View Details", ar: "التفاصيل", tr: "Detayları Gör" },
 
   // Why Choose Us
-  whyTitle: { en: "The Pillars of Jag", ar: "ركائز التميز في جاغ", tr: "Jag Deneyimini Eşsiz Kılanlar" },
+  whyTitle: { en: "The Pillars of Jashan", ar: "ركائز التميز في جاشان", tr: "Jashan Deneyimini Eşsiz Kılanlar" },
   whySub: { en: "Crafting unforgettable memories through absolute devotion to the culinary arts.", ar: "صنع ذكريات لا تُنسى من خلال التفاني المطلق في فنون الخدمة والطهي.", tr: "Gastronomi sanatına adanmışlıkla unutulmaz anlar yaratıyoruz." },
   why1Title: { en: "Fresh Organic Ingredients", ar: "مكونات عضوية طازجة", tr: "Taze Organik Malzemeler" },
   why1Desc: { en: "Straight from Anatolian soil and Caspian shores, selected by our chefs.", ar: "مباشرة من تربة الأناضول وسواحل القوقاز، مختارة بعناية فائقة.", tr: "Doğrudan Anadolu topraklarından ve Hazar kıyılarından şeflerimizin seçimiyle." },
@@ -102,7 +102,7 @@ export const translations: Translations = {
 
   // Reservation Form
   reserveTitle: { en: "Secure Your Culinary Seating", ar: "احجز مقعدك الفاخر", tr: "Masada Yerinizi Ayırtın" },
-  reserveSub: { en: "Reserve your table at Jag Restaurant Dubai. Valet parking is complimentary.", ar: "احجز طاولتك في مطعم جاغ دبي. تتوفر خدمة صف السيارات مجاناً.", tr: "Jag Restaurant Dubai'de rezervasyonunuzu yapın. Valet parking ücretsizdir." },
+  reserveSub: { en: "Reserve your table at Jashan Restaurant Dubai. Valet parking is complimentary.", ar: "احجز طاولتك في مطعم جاشان دبي. تتوفر خدمة صف السيارات مجاناً.", tr: "Jashan Restaurant Dubai'de rezervasyonunuzu yapın. Valet parking ücretsizdir." },
   resName: { en: "Full Name", ar: "الاسم الكامل", tr: "Ad Soyad" },
   resEmail: { en: "Email Address", ar: "البريد الإلكتروني", tr: "E-posta Adresi" },
   resPhone: { en: "Phone Number", ar: "رقم الهاتف", tr: "Telefon Numarası" },
@@ -186,13 +186,13 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
     if (typeof window !== "undefined") {
-      localStorage.setItem("jag_lang", lang);
+      localStorage.setItem("jashan_lang", lang);
     }
   };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("jag_lang") as Language;
+      const stored = localStorage.getItem("jashan_lang") as Language;
       if (stored && (stored === "en" || stored === "ar" || stored === "tr")) {
         setLanguageState(stored);
       }

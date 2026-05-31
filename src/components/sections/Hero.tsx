@@ -60,10 +60,10 @@ export const Hero: React.FC = () => {
             className="text-xs font-bold tracking-[0.4em] text-gold uppercase mb-4 block"
           >
             {language === "ar"
-              ? "مرحبًا بكم في مطعم جاغ"
+              ? "مرحبًا بكم في مطعم جاشان"
               : language === "tr"
-              ? "JAG RESTAURANT'A HOŞ GELDİNİZ"
-              : "WELCOME TO JAG RESTAURANT"}
+              ? "JASHAN RESTAURANT'A HOŞ GELDİNİZ"
+              : "WELCOME TO JASHAN RESTAURANT"}
           </motion.span>
 
           <motion.h1

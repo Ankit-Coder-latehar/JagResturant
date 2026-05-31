@@ -86,7 +86,7 @@ export const Footer: React.FC = () => {
                 <circle cx="50" cy="45" r="8" fill="#D4AF37" />
               </svg>
               <span className="text-xl font-serif-luxury font-bold tracking-[0.2em] text-gold">
-                JAG
+                JASHAN
               </span>
             </div>
             <p className="text-xs text-text-muted leading-relaxed font-light">
@@ -173,7 +173,7 @@ export const Footer: React.FC = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={14} className="text-gold shrink-0" />
-                <span>concierge@jagrestaurant.ae</span>
+                <span>concierge@jashanrestaurant.ae</span>
               </div>
             </div>
           </div>
@@ -228,7 +228,7 @@ export const Footer: React.FC = () => {
         {/* Separator */}
         <div className="border-t border-gold-border/20 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-[10px] text-text-muted tracking-wider font-light">
-            &copy; {new Date().getFullYear()} JAG RESTAURANT DUBAI. {t("allRightsReserved")}
+            &copy; {new Date().getFullYear()} JASHAN RESTAURANT DUBAI. {t("allRightsReserved")}
           </span>
 
           <span className="text-[9px] text-text-muted flex items-center gap-1 font-mono tracking-widest uppercase">
