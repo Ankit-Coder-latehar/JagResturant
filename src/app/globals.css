@@ -1,26 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark theme is the default primary design */
+  --bg-primary: #121212;
+  --bg-secondary: #0B0B0B;
+  --accent-gold: #D4AF37;
+  --accent-gold-hover: #F3E5AB;
+  --text-primary: #FFFFFF;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+  --border-color: rgba(212, 175, 55, 0.15);
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Montserrat', 'Inter', sans-serif;
+  --font-arabic: 'Cairo', sans-serif;
+
+  /* Glassmorphism configs */
+  --glass-bg: rgba(18, 18, 18, 0.65);
+  --glass-border: rgba(212, 175, 55, 0.15);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
+}
+
+:root.light {
+  --bg-primary: #FAF8F5;
+  --bg-secondary: #F4F1EA;
+  --accent-gold: #C5A031;
+  --accent-gold-hover: #AA841C;
+  --text-primary: #1C1917;
+  --text-secondary: #44403C;
+  --text-muted: #78716C;
+  --border-color: rgba(197, 160, 49, 0.25);
+  
+  --glass-bg: rgba(250, 248, 245, 0.75);
+  --glass-border: rgba(197, 160, 49, 0.25);
+  --glass-shadow: rgba(68, 64, 60, 0.08);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--accent-gold);
+  --color-gold-hover: var(--accent-gold-hover);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-gold-border: var(--border-color);
+  
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+  --font-arabic: var(--font-arabic);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Custom Base Configurations */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
+
+/* Apply Cairo font when in Arabic layout */
+[dir="rtl"] body {
+  font-family: var(--font-arabic), var(--font-sans);
+}
+
+/* Custom Premium Glassmorphism classes */
+.glass-premium {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 var(--glass-shadow);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-gold);
+  box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.15);
+}
+
+/* Typography styles */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+/* Custom elegant scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold-hover);
+}
+
+/* Neumorphism subtle border styling */
+.neumorphism-inset {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.8), inset -2px -2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.light .neumorphism-inset {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.08), inset -2px -2px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Glowing text effects */
+.text-gold-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+/* Custom background animation */
+.bg-glow-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+/* Infinite continuous sliding track marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
